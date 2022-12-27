@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;800&display=swap");
-
 :root {
   --gray: #7d7d7d;
   --blue-dark: #0b1120;
@@ -15,7 +14,6 @@ body {
   background-color: var(--blue-dark);
   font-family: var(--inter-font);
 }
-
 .web-title {
   text-align: center;
   color: white;
@@ -69,6 +67,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-size: 1.3rem;
+  text-align :center;
 }
 
 .letter-row {
@@ -79,6 +78,7 @@ body {
 
 .message-text {
   color: white;
+  text-align:center;
 }
 
 .restart-container {
