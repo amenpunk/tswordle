@@ -58,7 +58,9 @@ const checkWord: Observer<KeyboardEvent> = {
         userAnswer = [];
         letterRowIndex++;
       } else {
-        messageText.textContent = "te faltan palabras";
+        if(messageText){
+          messageText.textContent = "te faltan palabras";
+        }
       }
 
 
@@ -92,7 +94,10 @@ onKeyDown$.subscribe(checkWord)
 onKeyDown$.subscribe(deleteWord);
 
 userWinOrLose$.subscribe((value) => {
-  messageText.textContent = "Ganaste!!!";
+  if(messageText){
+    console.log(value);
+    messageText.textContent = "Ganaste!!!";
+  }
   let letterRowWined: Element = Array.from(letterRows)[letterRowIndex];
   for (let i = 0; i < 5; i++) {
     letterRowWined.children[i].classList.add('letter-green')
