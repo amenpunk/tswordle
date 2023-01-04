@@ -3,16 +3,20 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <link rel="stylesheet" href="./src/style.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tswordle</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <link rel="icon" type="image/x-icon" href="./public/vite.svg">
 </head>
 
 <body>
-  <div id="app"></div>
-  <!-- <script type="module" src="/src/main.ts"></script> -->
-  <script type="module" src="/src/operators.ts"></script>
-  <body></body>
+  <h1 class="web-title">Board</h1>
+  <div class="whiteboard-container">
+    <canvas id="reactive-canvas" class="canvas" height="500" width="900"></canvas>
+  </div>
+  <div class="restart-button" id="restart-button">Reiniciar</div>
+  <script type="module" src="/src/canva.ts"></script>
+  <script type="module" src="/src/distinc.ts"></script>
+</body>
 
 </html>

@@ -1,7 +1,6 @@
 import { map, reduce, filter } from 'rxjs/operators';
 import { from, Observer, interval } from 'rxjs'
 
-
 const timepassed$ = interval(120).pipe( 
   filter( num => num % 2 == 0)
 );
