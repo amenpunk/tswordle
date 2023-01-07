@@ -1,5 +1,5 @@
-import { map, reduce, filter } from 'rxjs/operators';
-import { from, Observer, interval } from 'rxjs'
+import { map, reduce, filter, pluck, startWith, endWith } from 'rxjs/operators';
+import { from, Observer, interval, fromEvent, of } from 'rxjs'
 
 const timepassed$ = interval(120).pipe( 
   filter( num => num % 2 == 0)
@@ -18,4 +18,15 @@ const showNumbers: Observer<number[]> = {
 }
 
 // numbers$.subscribe(showNumbers)
-timepassed$.subscribe(console.log)
+// timepassed$.subscribe(console.log)
+
+const mouseMove$ = fromEvent(document, 'mousemove').pipe(
+  pluck("clientX")
+)
+
+const letters = of("a", "b", "c").pipe(
+  endWith("z")
+)
+letters.subscribe(console.log)
+
+// mouseMove$.subscribe(console.log)
